@@ -4,45 +4,37 @@
  */
 package entity;
 
-import java.util.List;
-
 /**
  *
  * @author Admin
  */
 public class Account {
 
-    private int userID;
+    private int id;
     private String user;
-    private String password;
+    private String pass;
     private int isSell;
     private int isAdmin;
     private String email;
-    private List<Review> review;
-    private List<Invoice> invoice;
-    private List<Cart> cart;
 
     public Account() {
     }
 
-    public Account(int userID, String user, String password, int isSell, int isAdmin, String email, List<Review> review, List<Invoice> invoice, List<Cart> cart) {
-        this.userID = userID;
+    public Account(int id, String user, String pass, int isSell, int isAdmin, String email) {
+        this.id = id;
         this.user = user;
-        this.password = password;
+        this.pass = pass;
         this.isSell = isSell;
         this.isAdmin = isAdmin;
         this.email = email;
-        this.review = review;
-        this.invoice = invoice;
-        this.cart = cart;
     }
 
-    public int getUserID() {
-        return userID;
+    public int getId() {
+        return id;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUser() {
@@ -53,12 +45,12 @@ public class Account {
         this.user = user;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPass() {
+        return pass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     public int getIsSell() {
@@ -85,33 +77,9 @@ public class Account {
         this.email = email;
     }
 
-    public List<Review> getReview() {
-        return review;
-    }
-
-    public void setReview(List<Review> review) {
-        this.review = review;
-    }
-
-    public List<Invoice> getInvoice() {
-        return invoice;
-    }
-
-    public void setInvoice(List<Invoice> invoice) {
-        this.invoice = invoice;
-    }
-
-    public List<Cart> getCart() {
-        return cart;
-    }
-
-    public void setCart(List<Cart> cart) {
-        this.cart = cart;
-    }
-
     @Override
     public String toString() {
-        return "Account [id=" + userID + ", user=" + user + ", pass=" + password + ", isSell=" + isSell + ", isAdmin=" + isAdmin
+        return "Account [id=" + id + ", user=" + user + ", pass=" + pass + ", isSell=" + isSell + ", isAdmin=" + isAdmin
                 + ", email=" + email + "]";
     }
 

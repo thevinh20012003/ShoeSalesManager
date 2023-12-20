@@ -9,23 +9,24 @@ package entity;
  * @author Admin
  */
 public class Cart {
+
     private int accountID;
     private int productID;
     private int amount;
-    private int CartID;
+    private int maCart;
     private String size;
-    private Account account;
 
-    public Cart(int accountID, int productID, int amount, int CartID, String size, Account account) {
+    public Cart(int accountID, int productID, int amount, int maCart, String size) {
+
         this.accountID = accountID;
         this.productID = productID;
         this.amount = amount;
-        this.CartID = CartID;
+        this.maCart = maCart;
         this.size = size;
-        this.account = account;
     }
 
     public Cart() {
+
     }
 
     public int getAccountID() {
@@ -52,12 +53,12 @@ public class Cart {
         this.amount = amount;
     }
 
-    public int getCartID() {
-        return CartID;
+    public int getMaCart() {
+        return maCart;
     }
 
-    public void setCartID(int CartID) {
-        this.CartID = CartID;
+    public void setMaCart(int maCart) {
+        this.maCart = maCart;
     }
 
     public String getSize() {
@@ -68,11 +69,9 @@ public class Cart {
         this.size = size;
     }
 
-    public Account getAccount() {
-        return account;
-    }
-
-    public void setAccount(Account account) {
-        this.account = account;
+    @Override
+    public String toString() {
+        return "Cart [accountID=" + accountID + ", productID=" + productID + ", amount=" + amount + ", maCart=" + maCart
+                + ", size=" + size + "]";
     }
 }
